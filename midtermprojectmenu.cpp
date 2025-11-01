@@ -30,7 +30,7 @@ BankAccount :: BankAccount(const string& name, int accNum, double deposit) //Con
          cout << "You're going broke :(." << endl;
          return false;
      }
-     balance -= amount; //Subtracting the amount withdrew from the user's balance
+     balance -= amount;
      history.push_back ("Withdrew: $" + numToStr(amount));
      cout << "Withdrew $" << fixed << setprecision(2) << amount << endl;
      if (balance == 0) {
@@ -52,7 +52,7 @@ BankAccount :: BankAccount(const string& name, int accNum, double deposit) //Con
  
  void BankAccount :: showHistory() const{ //Outputs the history
      cout << "Transaction History " << endl;
-     for (const auto& record : history) { //Uses a copy of the record variable so it doesn't change it when looping through history 
+     for (const auto& record : history) { //Uses a copy of the record variable so it doesn't change it when looping through history
          cout << record << endl;
      }
  }
@@ -73,6 +73,8 @@ int main()
     cout << "Enter initial deposit (>0): "; // Need to add a check system to make sure initial deposit is positive
     cin >> tempBalance;
     cout << endl;
+    
+    BankAccount account(tempName, tempAccNum, tempBalance);
     
     // Menu
     cout << "Menu:" << endl;
@@ -125,5 +127,4 @@ int main()
     }
     
     return 0;
-
 }
