@@ -1,9 +1,10 @@
-#ifndef BankAccount.h 
-#define BankAccount.h 
+#ifndef BankAccount_h 
+#define BankAccount_h 
 
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 using namespace std;
 
 class BankAccount {
@@ -13,6 +14,13 @@ class BankAccount {
         int accountNumber;
         double balance;
         vector<string> history;
+        
+        template <typename T>
+        string numToStr (T num) const {
+            stringstream ss;
+            ss << num;
+            return ss.str();
+        }
         
     public:
     
