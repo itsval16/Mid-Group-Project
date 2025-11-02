@@ -175,12 +175,13 @@ int main() {
  
  Valeria Pavia
  11/01/2025
- Reflection -> For me the hardest part of the project had to be organizing the whole structure of the .cpp file. I had to note down how the 
+ Reflection -> For me, the hardest part of the project had to be organizing the whole structure of the .cpp file. I had to note down how the format of the BankAccount.cpp.file was going to be structured from the example of the sample. After Junjie helped cover most of the structure in the .cpp file, I encountered an issue with the way the math was running in the sample output. We kept running into an issue where our program kept saying that after the withdrawal of the $250, it would say "balance is now zero," but in the sample, it would say Insufficient funds. I shared that with my group, and we realized that the math was incorrect in the sample output because the initial deposit was $200, plus the deposited amount was $50, which in total is $250. So, in theory, it shouldn't say it has insufficient funds and instead withdraw the $250. I was stuck with this issue for a while, so it was nice to know that our code wasn't the problem, or so I hope. 
 
  Junjie Li
  11/01/2025
  Reflection -> For this midterm project, my part in setting up the menu was fairly straightforward, so I didn't have any issues there. However, when it came to validating whether the numerical inputs would work correctly, they essentially only accepted positive numbers. Thankfully, while I was trying to think of a solution, my groupmate Valeria managed to come up with a function that did exactly what I was trying to do, of course, more refined. Definitely learned that working together makes life easier, as without our trying to figure out the solution, it would’ve taken longer than if I were the only one trying to do it. So even if it's obvious, it's nice to work on things together.
 */
+
 
 
 
