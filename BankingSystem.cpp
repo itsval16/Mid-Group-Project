@@ -73,7 +73,7 @@ bool BankAccount::withdraw(double amount) { //removes a specific amount that is 
     history.push_back("Withdraw $" + numToStr(amount)); //stores the withdrawn amount to the transaction history for when later needed, can be printed
     cout << "Withdraw $" << fixed << setprecision(2) << amount << endl; //outputs the withdrawal amount
     // ensures if the balance has reached zero after it has withdrawn the amount
-        if (abs(balance) < amount) {
+        if (abs(balance) == 0) {
             cout << "Balance is now zero." << endl; // prints to the user that the balance is zero
         }
         return true; // withdrawl went through
@@ -181,6 +181,7 @@ int main() {
  11/01/2025
  Reflection -> For this midterm project, my part in setting up the menu was fairly straightforward, so I didn't have any issues there. However, when it came to validating whether the numerical inputs would work correctly, they essentially only accepted positive numbers. Thankfully, while I was trying to think of a solution, my groupmate Valeria managed to come up with a function that did exactly what I was trying to do, of course, more refined. Definitely learned that working together makes life easier, as without our trying to figure out the solution, it would’ve taken longer than if I were the only one trying to do it. So even if it's obvious, it's nice to work on things together.
 */
+
 
 
 
