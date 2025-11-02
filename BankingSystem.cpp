@@ -172,13 +172,17 @@ int main() {
 
 /*
  INDIVIDUAL REFLECTIONS:
- //Ali Roshdi
- //11/01/2025
- //Reflection -> What I found tricky for this assignment was splitting up the work initially, as we all just kind of went with the flow for a little bit and then were able to properly figure things out as we went along. Another tricky part was figuring out how to use the vector properly for the transaction history, as in order to constantly add the new transactions we'd have to implement the push_back function. As well as having to convert the integers/doubles into strings, after some time I was able to put it all together using a stringstream and template function. However, prior to coming across that solution, I was doing some research and came across something new that I learned which was a function named 'to_string' that is in the <iomanip> library that automatically converts integers and doubles into strings. IBak did not use that solution however, and ended up using the stringstream as I've mentioned earlier.
- //
- // Valeria Pavia
- // 11/01/2025
- // Reflection -> For me the hardest part of the project had to be organizing the whole structure of the .cpp file. I had to note down how the 
+ Ali Roshdi
+ 11/01/2025
+ Reflection -> What I found tricky for this assignment was splitting up the work initially, as we all just kind of went with the flow for a little bit and then were able to properly figure things out as we went along. Another tricky part was figuring out how to use the vector properly for the transaction history, as in order to constantly add the new transactions we'd have to implement the push_back function. As well as having to convert the integers/doubles into strings, after some time I was able to put it all together using a stringstream and template function. However, prior to coming across that solution, I was doing some research and came across something new that I learned which was a function named 'to_string' that is in the <iomanip> library that automatically converts integers and doubles into strings. IBak did not use that solution however, and ended up using the stringstream as I've mentioned earlier.
  
+ Valeria Pavia
+ 11/01/2025
+ Reflection -> For me the hardest part of the project had to be organizing the whole structure of the .cpp file. I had to note down how the 
+
+ Junjie Li
+ 11/01/2025
+ Reflection -> For this midterm project, my part in setting up the menu was fairly straightforward, so I didn't have any issues there. However, when it came to validating whether the numerical inputs would work correctly, they essentially only accepted positive numbers. Thankfully, while I was trying to think of a solution, my groupmate Valeria managed to come up with a function that did exactly what I was trying to do, of course, more refined. Definitely learned that working together makes life easier, as without our trying to figure out the solution, it would’ve taken longer than if I were the only one trying to do it. So even if it's obvious, it's nice to work on things together.
 */
+
 
