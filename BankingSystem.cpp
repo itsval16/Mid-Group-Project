@@ -108,12 +108,9 @@ int main() {
     string tempName;
     cout << "Enter owner name: "; //get owners name
     getline(cin, tempName); //read's the users input
-    
-    int tempAccNum;
-    cout << "Enter account number: "; //get users account number
-    cin >> tempAccNum;
-    cin.ignore(1000, '\n'); // clears any buffers from the users input
-    
+
+    double tempAccNum = getValidNum("Enter account number: "); //user can enter the amount they would like to deposit
+
     double tempBalance = getValidNum("Enter initial deposit (>0): "); //user can enter the amount they would like to deposit
     
     // Create BankAccount object
@@ -184,5 +181,6 @@ int main() {
  11/01/2025
  Reflection -> For this midterm project, my part in setting up the menu was fairly straightforward, so I didn't have any issues there. However, when it came to validating whether the numerical inputs would work correctly, they essentially only accepted positive numbers. Thankfully, while I was trying to think of a solution, my groupmate Valeria managed to come up with a function that did exactly what I was trying to do, of course, more refined. Definitely learned that working together makes life easier, as without our trying to figure out the solution, it would’ve taken longer than if I were the only one trying to do it. So even if it's obvious, it's nice to work on things together.
 */
+
 
 
