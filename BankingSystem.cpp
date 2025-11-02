@@ -54,25 +54,25 @@ string BankAccount::numToStr(double num) const {
 //junjie added
 // Constructor - FIXED: removed extra text and fixed syntax
 BankAccount::BankAccount(const string& name, int accNum, double deposit)
-    : ownerName(name), accountNumber(accNum), balance(deposit) { // takes name of account owner, account number and their inital deposit amount
-    history.push_back("Account created with initial deposit $" + numToStr(deposit)); //adds the inital deposit with the transaction history for when later needed, can be printed
+    : ownerName(name), accountNumber(accNum), balance(deposit) { // takes name of account owner, account number, and their initial deposit amount
+    history.push_back("Account created with initial deposit $" + numToStr(deposit)); //adds the initial deposit with the transaction history for when later needed, can be printed
 }
 
 void BankAccount::deposit(double amount) { //allows for a specific amount to be added to our account balance
-    balance += amount; //increases the amaount balance to the amount that is being deposited
+    balance += amount; //increases the amount balance to the amount that is being deposited
     history.push_back("Deposited $" + numToStr(amount)); //adds the deposited amount with the transaction history for when later needed, can be printed
     cout << "Deposited $" << fixed << setprecision(2) << amount << endl; //prints out the amount deposited!
 }
 
-bool BankAccount::withdraw(double amount) { //removes a specific amount that is inputed
-    if (amount > balance) { //ensures if the amount being withdrawn is not greater than the current balance
+bool BankAccount::withdraw(double amount) { //removes a specific amount that is input
+    if (amount > balance) { //ensures that the amount being withdrawn is not greater than the current balance
         cout << "Insufficient funds." << endl;
-        return false; //if it is greater then the withdrawal fails to continue
+        return false; //if it is greater than, the withdrawal fails to continue
     }
     balance -= amount; //decrease the amount that is being withdrawn
-    history.push_back("Withdraw $" + numToStr(amount)); //stores the withdrawn ammount to the transaction history for when later needed, can be printed
-    cout << "Withdraw $" << fixed << setprecision(2) << amount << endl; //outputs the withdrawl ammoint
-    // ensures if the balance has reached zero after it has withdawn the amount
+    history.push_back("Withdraw $" + numToStr(amount)); //stores the withdrawn amount to the transaction history for when later needed, can be printed
+    cout << "Withdraw $" << fixed << setprecision(2) << amount << endl; //outputs the withdrawal amount
+    // ensures if the balance has reached zero after it has withdrawn the amount
         if (abs(balance) < amount) {
             cout << "Balance is now zero." << endl; // prints to the user that the balance is zero
         }
@@ -84,7 +84,7 @@ double BankAccount::getBalance() const {
     return balance;
 }
 
-//prints all the information of the account holder such as name,account num. and balance amount
+//prints all the information of the account holder, such as name,account num. and balance amount
 void BankAccount::display() const {
     cout << "Owner: " << ownerName << endl;
     cout << "Account: " << accountNumber << endl;
@@ -100,7 +100,7 @@ void BankAccount::showHistory() const {
     }
 }
 
-//main function that helps recieve all users input and print the correct information
+//main function that helps receive all users input and print the correct information
 int main() {
     // Get account info
     cout << "=== Banking System ===" << endl;
@@ -162,21 +162,23 @@ int main() {
             cout << "Goodbye!" << endl;
             bankingStatus = false;
         }
-        cout << endl; //adds space betwwen the options of the menu
+        cout << endl; //adds space between the options of the menu
     }
     
-    return 0; //program ends 
+    return 0; //program ends
 }
 
 
-/* 
-Ali Roshdi 
-11/01/2025
- Reflection -> What I found tricky for this assignment was splitting up the work initially, as we all just kind of went with the flow for 
- a little bit and then were able to properly figure things out as we went along. Another tricky part was figuring out how to use the vector 
- properly for the transaction history, as in order to constantly add the new transactions we'd have to implement the push_back function. As 
- well as having to convert the integers/doubles into strings, after some time I was able to put it all together using a stringstream and 
- template function. However, prior to coming across that solution, I was doing some research and came across something new that I learned
- which was a function named 'to_string' that is in the <iomanip> library that automatically converts integers and doubles into strings. I
- did not use that solution however, and ended up using the stringstream as I've mentioned earlier.
- */
+
+/*
+ INDIVIDUAL REFLECTIONS:
+ //Ali Roshdi
+ //11/01/2025
+ //Reflection -> What I found tricky for this assignment was splitting up the work initially, as we all just kind of went with the flow for a little bit and then were able to properly figure things out as we went along. Another tricky part was figuring out how to use the vector properly for the transaction history, as in order to constantly add the new transactions we'd have to implement the push_back function. As well as having to convert the integers/doubles into strings, after some time I was able to put it all together using a stringstream and template function. However, prior to coming across that solution, I was doing some research and came across something new that I learned which was a function named 'to_string' that is in the <iomanip> library that automatically converts integers and doubles into strings. IBak did not use that solution however, and ended up using the stringstream as I've mentioned earlier.
+ //
+ // Valeria Pavia
+ // 11/01/2025
+ // Reflection -> For me the hardest part of the project had to be organizing the whole structure of the .cpp file. I had to note down how the 
+ 
+*/
+
